@@ -1,0 +1,1212 @@
+/* ------------------------------------------
+<--- IMPORTACIONES DE LETRA --->
+------------------------------------------ */
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@500&family=Nunito:ital,wght@0,200;0,400;1,500&family=Ubuntu:ital,wght@1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;400;800&display=swap');
+
+/* ------------------------------------------
+<--- FIN IMPORTACIONES DE LETRA ---> 
+------------------------------------------ */
+/* ------------------------------------------
+<--- PALETA DE COLORES --->
+------------------------------------------ */
+:root{ 
+    --Rojo:#ff3838;
+    --Blanco: #f0f8ff;
+    --Gris: #6a6868;
+    --Azul: #30475E;
+    --Negro: #121212;
+    --Mostaza: #f4ba00;
+    --Sombreado:  0 .5rem 1rem #0000001a;
+    --Borde: .2rem solid #0000001a;
+    --outline: .1rem solid #0000001a;
+    --hover_outline: .2rem solid var(var(--Negro));
+}
+::selection{
+    background-color: var(--Rojo);
+    color: var(--Blanco);
+}
+/* ------------------------------------------
+<--- FIN PALETA DE COLORES --->
+------------------------------------------ */
+
+*{
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: 0;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .5s; 
+}
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+     scroll-padding-top: 7rem;
+}
+body{
+    background-color: black;
+}
+/* 0-Index.html */
+/* HEADER */
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: .2rem 9%;
+    background-color: black;
+    box-shadow: var(--Sombreado);
+}
+/* LOGO */
+.header .logo img{
+    border-radius: .10rem;
+    height: 8rem;
+    width: 16rem;
+}
+/* FIN LOGO */
+/* NAVEGACION */
+.header .navegacion a{
+    font-size: 2rem;
+    margin: 0 1rem;
+    color: var(--Blanco);
+
+}
+.header .navegacion a:hover{
+    color: var(--Rojo);
+    border-top: 3px solid var(--Rojo);
+    transition: all 0.1s;
+}
+.header .navegacion a:active{
+    color: var(--Azul);
+    border-top: 3px solid var(--Azul);
+    transition: all .1s;
+}
+/* FIN NAVEGACION */
+/* ICONOS HEADER */
+.header .iconos div{
+    height: 4.5rem;
+    width: 4.5rem;
+    line-height: 4.5rem;
+    border-radius: .5rem;
+    background-color: var(--Blanco);
+    color: var(--Rojo);
+    font-size: 2rem;
+    margin-right: .3rem;
+    text-align: center;
+}
+.header .iconos div:hover{
+    color: var(--Blanco);
+    background-color: var(--Rojo);
+    cursor: pointer;
+}
+#menu{
+    display: none;
+}
+/* FIN ICONOS HEADER */
+/* FORMULARIO BUSCADOR */
+.header .buscador{
+    position: absolute;
+    top: 110%;
+    right: -110rem;
+    width: 50rem;
+    height: 5rem;
+    background-color: var(--Blanco);
+    border-radius: .5rem;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    box-shadow: var(--Sombreado);
+}
+.header .buscador.activador{
+    right: 2rem;
+    transition: .3s linear;
+}
+
+.header .buscador input{
+    height: 100%;
+    width: 100%;
+    background: none;
+    text-transform: none;
+    font-size: 1.6rem;
+    color: var(--Negro);
+    padding: 0 1rem;
+}
+.header .buscador label{
+    font-size: 2.2rem;
+    padding-right: 1.5rem;
+    color: var(--Negro);
+    cursor: pointer;
+}
+.header .buscador label:hover{
+    color: var(--Rojo);
+}
+/* FIN FORMULARIO BUSCADOR */
+/* FORMULARIO CARRITO */
+.header .carrito{
+    position: absolute;
+    top: 110%;
+    right: -110rem;
+    width: 30rem;
+    height: 7rem;
+    font-size: 1.5rem;
+    text-align: center;
+    background-color: var(--Blanco);
+    border-radius: .5rem;
+    overflow: hidden;
+    align-items: center;
+    box-shadow: var(--Sombreado);
+}
+.header .carrito p a{
+    text-decoration:underline;
+    color: var(--Rojo);
+}
+.header .carrito.activador{
+    right: 2rem;
+    transition: .3s linear;
+}
+.header .carrito h3{
+    color: var(--Rojo);
+}
+/* FIN FORMULARIO CARRITO */
+#lineaHeader{
+    margin-top: 100px;
+    border: .5px solid var(--Negro);
+}
+/* FIN HEADER */
+
+/* INICIO PORTADA */
+section{
+    padding: 2rem 9%;
+}
+.portada{
+    padding: 2rem 10rem;
+    min-height: 99.8vh;
+    display: flex;
+    align-items: center;
+    background: url(../IMG/Portada2.jpg) no-repeat;
+    background-position: center;
+}
+.portada .contenido{
+    max-width: 60rem;
+}
+.portada .contenido h3{
+    font-size: 6rem;
+    text-transform: uppercase;
+    color: var(--Blanco);
+}
+.portada .contenido p{
+    font-size: 1.5rem;
+    font-weight: lighter;
+    line-height: 1.8;
+    color: var(--Blanco);
+}
+.vamos-btn{
+    font-size: 2.5rem;
+    background-color: none;
+    border: 1px solid var(--Rojo);
+    padding: 5px 20px;
+    color: var(--Blanco);
+    border-radius: 8px;
+    font-weight: bolder;
+}
+.vamos-btn:hover{
+    background-color: var(--Rojo);
+    font-size: 2.6rem;
+}
+.vamos-btn:active{
+    background-color: var(--Azul);
+    border: 1px solid var(--Azul);
+    transition: all .1s;
+}
+/* FIN INICIO PORTADA */
+
+/* INICIO COCINA REAL */
+.head{
+    text-align: center;
+    color: var(--Blanco);
+    text-transform: uppercase;
+    padding-bottom: 3.5rem;
+    font-size: 4rem;
+}
+.head span{
+    color: var(--Rojo);
+    text-transform: uppercase;
+}
+.cocinar .row{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: var(--Negro);
+}
+.cocinar .row .imagen{
+    flex: 1 1 45rem;
+}
+.cocinar .row .imagen img{
+    width: 100%;
+}
+.cocinar .row .contenidoCocinar{
+    flex: 1 1 45rem;
+    padding: 2rem;
+}
+.cocinar .row .contenidoCocinar h3{
+    font-size: 3rem;
+    color: var(--Blanco);
+    padding: 1rem 0;
+    line-height: 1.8;
+}
+.cocinar .row .contenidoCocinar p{
+    color: var(--Blanco);
+    font-size: 1.5rem;
+}
+/* FIN INICIO COCINA REAL */
+
+/* INICIO EVENTOS */
+.head2{
+    text-align: center;
+    color: var(--Blanco);
+    text-transform: uppercase;
+    padding-bottom: 3.5rem;
+    font-size: 4rem;
+}
+.head2 span{
+    color: var(--Rojo);
+    text-transform: uppercase;
+}
+.eventos .row2{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: var(--Negro);
+}
+.eventos .row2 .imagen2{
+    flex: 1 1 50rem;
+}
+.eventos .row2 .imagen2 img{
+    width: 100%;
+    float: right;
+    height: 450px;
+}
+.eventos .row2 .contenidoEventos{
+    flex: 1 1 45rem;
+    padding: 2rem;
+}
+.eventos .row2 .contenidoEventos h3{
+    font-size: 3rem;
+    color: var(--Blanco);
+    padding: 1rem 0;
+    line-height: 1.8;
+}
+.eventos .row2 .contenidoEventos p{
+    color: var(--Blanco);
+    font-size: 1.5rem;
+}
+/* FIN INICIO EVENTOS */
+
+/* MENU CUPA */
+.categorias .box{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    padding: 10px;
+}
+.categorias .box a{
+    color: aliceblue;
+    text-decoration: none;
+    font-size: 2rem;
+    text-align: center;
+    
+}
+.categorias .box a:hover{
+    background-color: var(--Rojo);
+    border-radius: 10px 10px 0 0;
+    transition: .5s;
+}
+
+.categorias .box .Entradas{
+    border-radius:0;
+    background:url(../IMG/entrada.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 200px;
+    width: 341px;
+}
+.categorias .box .Hamburgesas{
+    border-radius:0;
+    background:url(../IMG/burger.jpg);
+    background-size: contain;
+    background-repeat: repeat;
+    background-position: center;
+    height: 200px;
+    width: 341px;
+}
+
+.categorias .box .PlatosCarta{
+    border-radius:0;
+    background:url(../IMG/plato.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 200px;
+    width: 341px;
+}
+
+.categorias .box .Bebidas{
+    border-radius:0;
+    background:url(../IMG/bebida.webp);
+    background-size: cover;
+    background-position: center;
+    height: 200px;
+    width: 341px;
+}
+.categorias .box .todo{ 
+    border-radius:0;
+    background:url(../IMG/todo.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 200px;
+    width: 341px;
+}
+/* FIN MENU CUPA */
+/* INCIO CONTACTANOS */
+.heaContacto{
+    text-align: center;
+    color: var(--Blanco);
+    text-transform: uppercase;
+    padding-bottom: 3.5rem;
+    font-size: 4rem;
+}
+.heaContacto span{
+    color: var(--Rojo);
+    text-transform: uppercase;
+}
+.contacto .row3{
+    display: flex;
+    background-color: var(--Negro);
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.contacto .row3 .mapa{
+    flex: 1 1 45rem;
+    width: 100%;
+    object-fit: cover;
+}
+.contacto .row3 form{
+    flex: 1 1 45rem;
+    padding: 5rem 2rem;
+    text-align: center;
+}
+.contacto .row3 form h3{
+    text-transform: uppercase;
+    font-size: 3.5rem;
+    color: var(--Blanco);
+}
+.contacto .row3 form .contactobox{
+    display: flex;
+    align-items: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+    border: 1px solid var(--Azul);
+}
+.contacto .row3 form .contactobox span{
+    color: var(--Rojo);
+    font-size: 2rem;
+    padding-left: 2rem;
+}
+.contacto .row3 form .contactobox input{
+    width: 100%;
+    padding: 2rem;
+    font-size: 1.7rem;
+    color: var(--Blanco);
+    background: none;
+    text-transform: none;
+}
+
+.contacto .enviar-btn{
+    font-size: 2.5rem;
+    background-color:var(--Negro);
+    border: 1px solid var(--Azul);
+    padding: 5px 20px;
+    color: var(--Blanco);
+    border-radius: 8px;
+    font-weight: bolder;
+    cursor: pointer;
+}
+.contacto .enviar-btn:hover{
+    background-color: var(--Azul);
+    font-size: 2.6rem;
+}
+.contacto .enviar-btn:active{
+    background-color: var(--Rojo);
+    border: 1px solid var(--Rojo);
+    transition: all .1s;
+}
+/* FIN INCIO CONTACTANOS */
+/* FIN 0-Index.html */
+
+/* 01-Menu_Cupa_All.html */
+/* .menu{
+    background-color: var(--Rojo);
+    color: var(--Blanco);
+    margin-bottom: 30px;
+    padding: 30px 0 ;
+    grid-column: 1/-1;
+    text-align: center;
+    
+}
+.textoMenu{
+    padding: 0 10px 20px 10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax (350px,1fr));
+    grid-gap: 20px 40px;
+}
+.menu h1{
+    font-weight: 400;
+    font-size: 30px;
+    letter-spacing: 10px;
+    margin-bottom: 10px;
+}
+.textoMenu h3{
+    font-weight: 600;
+    font-size: 22px;
+    letter-spacing: 5px;
+} */
+.menu{
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax(350px,1fr));
+    grid-gap: 20px 40px;
+}
+.heading{
+    background-color: var(--Rojo);
+    color: var(--Blanco);
+    margin-bottom: 30px;
+    padding: 20px 0 30px 0;
+    grid-column: 1/-1;
+    text-align: center;
+}
+.heading>h1{
+    font-weight: 400;
+    font-size: 30px;
+    letter-spacing: 10px;
+    margin-bottom: 10px;
+}
+.heading>h3{
+    font-weight: 600;
+    font-size: 22px;
+    letter-spacing: 5px;
+}
+.food-items{
+    display: grid;
+    position: relative;
+    grid-template-rows: auto 1fr;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    margin-top: 50px;
+    margin-left:20px;
+}
+.food-items img{
+    position: relative;
+    width: 100%;
+    border-radius: 15px 15px 0 0;
+}
+
+.details{
+    padding: 20px 10px;
+    display: grid;
+    grid-template-rows: auto 1fr 50px;
+    grid-row-gap: 15px;
+}
+.details-sub{
+    display: grid;
+    grid-template-columns: auto auto;
+    color: var(--Blanco);
+}
+.details-sub>h5{
+    font-weight: 600;
+    font-size: 18px;
+}
+.price{
+    text-align: right;
+}
+.details>p{
+    color: var(--Blanco);
+    font-size: 15px;
+    line-height: 28px;
+    font-weight: 400;
+    align-self: stretch;
+}
+.details>button{
+    background-color: var(--Rojo);
+    border: none;
+    color: var(--Blanco);
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 5px;
+    width: 180px;
+}
+ .BarraMe{
+    padding: 0px 20px 20px 0px;
+}
+.BarraMe h2{
+    color: var(--Blanco);
+    text-align: left;
+    margin-left: 40px;
+    font-size: 2rem;
+}
+.categoriasMenu{
+    text-align: left;
+    margin-left: 40px;
+}
+.categoriasMenu a{
+    width: 50px;
+    margin: 20px;
+    padding: 10px;
+    text-align: center;
+    color: var(--Blanco);
+    font-size: 1.5rem;
+}
+.categoriasMenu a:hover{
+    background-color: var(--Rojo);
+    border-radius: 20px;
+} 
+
+/* FIN 01-Menu_Cupa_All.html */
+
+/* 03-Iniciar_Session.html */
+.Login{
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+    min-height: 100vh;
+    display: flex;
+    background: url(../IMG/login.jpg) no-repeat;
+    background-size: cover;
+}
+.container{
+    position: relative;
+    width: 800px;
+    height: 500px;
+    margin: 20px;
+
+}  
+.blueBg{
+    position: absolute;
+    top: 40px;
+    width: 100%;
+    height: 420px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    background-color: var(--Azul);
+}
+.blueBg .box{
+    position: relative;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.blueBg .box h2{
+    color: var(--Blanco);
+    font-size: 2rem;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+.blueBg .box button{
+    cursor: pointer;
+    padding: 10px 20px;
+    background: none;
+    border: 1px solid var(--Blanco);
+    border-radius: 8px;
+    color: var(--Blanco);
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+.blueBg .box button:hover{
+    background-color:var(--Rojo);
+    border: 1px solid var(--Rojo);
+}
+.blueBg .box button:active{
+    background-color: var(--Mostaza);
+    border: 1px solid var(--Mostaza);
+}
+.formBx{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background-color: var(--Rojo);
+    border-radius: 8px;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s ease-in-out;
+    overflow: hidden;
+    box-shadow: 5px 5px 9px 7px var(--Negro);
+}
+.formBx.activeForm{
+    left: 50%;
+    box-shadow: 5px 5px 10px 8px var(--Negro);
+}
+.formBx .form{
+    position: absolute;
+    left: 0;
+    width: 100%;
+    padding: 50px;
+    transition: 0.5s;
+}
+.formBx .formIniciar{
+    transition-delay: 0.25s;
+}
+.formBx.activeForm .formIniciar{
+    left: -100%;
+    transition-delay: 0s;
+}
+.formBx .formCrear{
+    left: 100%;
+    transition-delay: 0s;
+    
+}
+
+.formBx.activeForm .formCrear{
+    left: 0;
+    transition-delay: 0.25s;
+}
+.formBx .form form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.formBx .form form h3{
+    font-size: 2.5rem;
+    color: var(--Blanco);
+    margin-bottom: 20px;
+}
+.formBx .form form input{
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    outline: none;
+    font-size: 16px;
+}
+.formBx .form form input:focus{
+    border: 3px solid var(--Azul);
+    border-radius: 8px;
+    transition: 0.1s;
+}
+.formBx .form form #entrar{
+    background: none ;
+    color: var(--Blanco);
+    font-weight: bold;
+    border: 1px solid var(--Blanco);
+    cursor: pointer;
+}
+.formBx .form form #entrar:hover{
+    background:var(--Blanco);
+    color: var(--Rojo);
+}
+.formBx .form form #entrar:active{
+    background-color: var(--Azul);
+    border: 1ps solid var(--Azul);
+    color: var(--Blanco);
+}
+.formBx .form form p{
+    color: var(--Blanco);
+    font-size: 1.6rem;
+}
+.formBx .form form p a{
+    color: var(--Blanco);
+    text-decoration:underline;
+}
+.formBx .form form #index{
+    font-size: 1.5rem;
+    width: 40%;
+    color: var(--Blanco);
+    background: none;
+    border: 1px solid var(--Blanco);
+    padding: 8px ;
+    border-radius: 8px;
+}
+.formBx .form form #index{
+    background: none ;
+    color: var(--Blanco);
+    font-weight: bold;
+    border: 1px solid var(--Blanco);
+    cursor: pointer;
+}
+.formBx .form form #index:hover{
+    background:var(--Blanco);
+    color: var(--Rojo);
+}
+.formBx .form form #index:active{
+    background-color: var(--Azul);
+    border: 1px solid var(--Azul);
+    color: var(--Blanco);
+}
+.formBx .form form #index2{
+    font-size: 1.5rem;
+    width: 40%;
+    color: var(--Blanco);
+    background: none;
+    border: 1px solid var(--Blanco);
+    padding: 8px ;
+    border-radius: 8px;
+}
+.formBx .form form #index2{
+    background: none ;
+    color: var(--Blanco);
+    font-weight: bold;
+    border: 1px solid var(--Blanco);
+    cursor: pointer;
+}
+.formBx .form form #index2:hover{
+    background:var(--Blanco);
+    color: var(--Rojo);
+}
+.formBx .form form #index2:active{
+    background-color: var(--Azul);
+    border: 1px solid var(--Azul);
+    color: var(--Blanco);
+}
+.formBx .form  select{
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    outline: none;
+    font-size: 16px;
+
+}
+
+/* FIN 03-Iniciar_Session.html */
+
+/* 04-Perfil_Admin.php */
+body{
+    min-height: 100vh;
+}
+.menu_nav{
+    position: relative;
+    width: 100%;
+}
+.navAdmin{
+    position: fixed;
+    width: 300px;
+    height: 100%;
+    background-color: var(--Rojo);
+    border-left: 10px solid var(--Rojo);
+    transition: 0.5s;
+    overflow: hidden;
+}
+.navAdmin.active{
+    width: 80px;
+    transition: 0.5s;
+}
+.navAdmin ul{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+.navAdmin ul li {
+    position: relative;
+    list-style: none;
+    width: 100%;
+    border-top-left-radius:30px ;
+    border-bottom-left-radius:30px ;
+}
+.navAdmin ul li:hover,
+.navAdmin ul li.hovered {
+    background: var(--Negro);
+}
+.navAdmin ul li:hover:first-child a,
+.navAdmin ul li.hovered:first-child a{
+    background-color: var(--Rojo);
+}
+.navAdmin ul li:nth-child(1){
+    top: 20px;
+    margin-bottom: 45px;
+    background-color: none;
+}
+.navAdmin ul li a{
+    position: relative;
+    width: 100%;
+    display: block;
+    display: flex;
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: var(--Blanco);
+}
+.navAdmin ul li:not(:first-child):hover a::before,
+.navAdmin ul li:not(:first-child).hovered a::before{
+    content: '';
+    position: absolute;
+    right: 0;
+    top: -50px;
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    border-radius: 50%;
+    box-shadow: 35px 35px 0 10px var(--Negro);
+}
+.navAdmin ul li:not(:first-child):hover a::after,
+.navAdmin ul li:not(:first-child).hovered a::after{
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: -50px;
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    border-radius: 50%;
+    box-shadow: 35px -35px 0 10px var(--Negro);
+    pointer-events: none;
+}
+.navAdmin ul li a .iconos_nav{
+    position: relative;
+    display: block;
+    min-width: 60px;
+    height: 60px;
+    line-height: 70px;
+    text-align: center;
+}
+.navAdmin ul li a .iconos_nav .fa-solid{
+    font-size: 1.75em;
+}
+.navAdmin ul li a .titulo_nav{
+    position: relative;
+    display: block;
+    padding: 0 10px;
+    height: 60px;
+    line-height: 60px;
+    text-align: start;
+    white-space: nowrap;
+}
+
+/* menuAdmin */ 
+.menuAdmin{
+    position: absolute;
+    width: calc(100% - 300px);
+    left: 300px;
+    min-height: 100vh;
+    background-color: var(--Negro);
+    transition: 0.5s;
+    height: 100%;
+}
+.menuAdmin.active{
+    width: calc(100% - 80px);
+    left: 80px;
+}
+.topbar{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+}
+.toogle{
+    position: relative;
+    top: 0;
+    width: 60px;
+    height: 60px;
+    background-color: var(--Negro);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
+    color: var(--Blanco);
+    cursor: pointer;
+}
+.buscadorAdmin{
+    position: relative;
+    width: 400px;
+    margin: 0 10px;
+}
+.buscadorAdmin label{
+    position: relative;
+    width: 100%;
+}
+.buscadorAdmin label input{
+    width: 100%;
+    height: 40px;
+    border-radius: 40px;
+    padding: 5px 20px;
+    padding-left: 35px;
+    font-size: 1.5em;
+    outline: none;
+    border: none;
+}
+.buscadorAdmin label .fa-solid{
+    position: absolute;
+    margin-top: 14px;
+    left: 10px;
+    font-size: 1.5em;
+}
+.menu_nav .tituloAccion{
+    top: 100px;
+    width: 100%;
+    color: aliceblue;
+    position: absolute;
+    margin: 0px 30px;
+    font-size: 2rem;
+    transition: .5s;
+}
+.tituloAccion.active{
+    transition: .5s;
+}
+.admin{
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+}
+.admin img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.MenuUsuario{
+    position:relative;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    top: 80px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 20px;
+    grid-gap: 10px;
+}
+
+.MenuUsuario .box{
+   
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--Negro);
+    border: 1px solid var(--Rojo);
+    width: 300px;
+    height: 100px;
+    margin: 20px;
+    border-radius: 25px;
+}
+
+.MenuUsuario a{
+    color: var(--Blanco);
+    text-decoration: none;
+    font-size: 2rem;
+}
+.MenuUsuario a:hover .box{
+    background-color: var(--Rojo);
+    transition: .5s;
+
+}
+/* fin 04-Perfil_Admin.php */
+
+/* controlador 04(3)(1)-consultar_Usu.php */
+.FormUsu{
+    color: var(--Blanco);
+    text-align: center; 
+}
+.prueba{
+    background: var(--Negro);
+    min-height: 100vh;
+    position: relative;
+    margin-top: 100px;
+}
+.FormUsu .prueba th{
+    color: var(--Rojo);
+    margin: 5px;
+    font-size: 1.7rem;
+}
+.FormUsu .prueba td{
+    font-size: 1.5rem;
+    padding: 10px;
+}
+/* fin controlador 04(3)(1)-consultar_Usu.php */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* RESPONSIVE */ 
+@media (max-width:991px){
+    html{
+        font-size: 55%;
+    }
+    .header{
+        padding: 2rem;
+    }
+    section{
+        padding: 2rem;
+    }
+    /* formulario_inicio */
+    .container{
+        max-width: 400px;
+        height: 650px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .container .blueBg{
+        top: 0;
+        height: 100%;
+    }
+    .formBx{
+        width: 100%;
+        height: 500px;
+        top: 0;
+        box-shadow: none;
+    }
+    .blueBg .box{
+        position: absolute;
+        width: 100%;
+        height: 150px;
+        bottom: 0;
+    }
+    
+    .formBx.activeForm{
+        left: 0;
+        top: 150px;
+    }
+
+    /* Menu_cupa in index*/
+    .categorias .box{
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+    .categorias .box a{
+        font-size: 2.5rem;
+    }
+    /* Menu Cupa other page
+    .BarraMe{
+        background-color: #30475E;
+        text-align: center;
+    }
+    .BarraMe h2{
+        color: var(--Blanco);
+        text-align: center;
+        margin-right: 19px;
+        font-size: 2rem;
+    }
+    .categoriasMenu{
+        display: grid;
+        margin-top: 20px;
+    }
+    .categoriasMenu a{
+        width: 200px;
+        margin-left: 55px;
+        text-align: center;
+        border: 1px solid var(--Rojo);
+        color: var(--Blanco);
+        font-size: 1.8rem;
+        border-radius: 20px;
+        margin-top: -10px;
+    } */
+    
+}
+@media (max-width:768px){
+
+    #menu{
+        display: inline-block;
+    }
+    .header .navegacion{
+        position: absolute;
+        top: 110%; right: -110rem;
+        width: 30rem;
+        box-shadow: var(--Sombreado);
+        border-radius: .5rem;
+        background: var(--Negro);
+    }
+    .header .navegacion a{
+        font-size: 2rem;
+        margin: 2rem 2.5rem;
+        display: block; 
+    }
+    .header .navegacion.activador{
+        right: 2rem;
+        transition: .3s linear;
+    }
+    .header .buscador{
+        width: 90%;
+    }
+    .portada{
+        background-position: right;
+        justify-content: center;
+        text-align: center;
+    }
+    .portada .contenido h3{
+        font-size: 4.5rem;
+        background-color: #ff3838a1;
+    }
+    .portada .contenido p{
+        font-size: 1.5rem;
+        background-color: #ff3838a1;
+    }
+    .vamos-btn{
+       background-color: var(--Rojo);
+    }
+    p{
+        color: var(--Blanco);
+    }
+    /* menu_cupa */
+    .categorias{ 
+        text-align: center;
+    }
+    .categorias .box{
+        padding: 0;
+        margin: 0;
+        display: grid;
+        width: 100%;
+        grid-template-columns: repeat(1,1fr);
+    }
+    .categorias .box a{
+        font-size: 2.5rem;
+    }
+    
+}
+@media (max-width:450px){
+    html{
+        font-size: 50%;
+    }
+}
+/* FIN RESPONSIVE */

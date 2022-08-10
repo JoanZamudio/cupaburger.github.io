@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- SCRIPTS ICONOS -->
+    <script src="https://kit.fontawesome.com/db59255a97.js" crossorigin="anonymous"></script>
+    <!-- TIPOGRAFIA -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="../ASSETS/CSS/Melo.css">
+    <title>Inicio de Sesion</title>
+</head>
+<body>
+    
+    <div class="Login">
+        <div class="container">
+            
+        <div class="blueBg">
+            <div class="box IniciarSession" style="top: 0;">
+                <h2>¿Ya tienes una cuenta Cupa?</h2>
+                <button class="iniciarSesionBtn">Iniciar Sesion</button>
+            </div>
+            <div class="box CrearCuenta" >
+                <h2>¿Deseas crear una cuenta Cupa?</h2>
+                <button class="crearCuentaBtn">¡Vamos!</button>
+            </div>
+        </div>
+        <div class="formBx">
+            <div class="form formIniciar">
+                <form action="../MODEL/login.php" method="post" onsubmit="return validar()">
+                    <h3>Iniciar Sesion</h3>
+                    <input type="text" name="usuario" id="usuario" placeholder="Correo electronico" required>
+                    <input type="password" name="clave" id="clave" placeholder="Contraseña" required>
+                    <input type="submit" value="Entrar" id="entrar">
+                    <input type="button" value="Volver al inicio" id="index">
+                    <p>¿Olvido su contraseña? Haz clic <a href="#" class="olvidoContra">Aqui</a>.</p><br>
+                    
+                </form>
+            </div>
+            <div class="form formCrear">
+                <form action="">
+                    <h3>Crear Cuenta</h3>
+                    <input type="text" name="" id="" placeholder="Correo electronico" required>
+                    <input type="password" name="" id="" placeholder="Contraseña" required>
+                    <input type="password" name="" id="" placeholder="Repite tu contraseña" required>
+                    <input type="submit" value="Crear" id="entrar">
+                    <input type="button" value="Volver al inicio" id="index2">
+                    <p>¡A pocos pasos de sasiar tu hambre!</p>
+                </form>
+            </div>
+        </div>
+        </div>
+    </div>
+    <script>
+        const iniciarSesionBtn = document.querySelector('.iniciarSesionBtn');
+        const crearCuentaBtn = document.querySelector('.crearCuentaBtn');
+        const formBx = document.querySelector('.formBx');
+        const index = document.querySelector('#index');
+        const index2 = document.querySelector('#index2');
+
+        crearCuentaBtn.onclick = function(){
+        formBx.classList.add('activeForm');    
+        }
+        iniciarSesionBtn.onclick = function(){
+        formBx.classList.remove('activeForm');    
+        }
+        index.onclick = function(){
+            window.location.href = "../0-Index.html";
+        }
+        index2.onclick = function(){
+            window.location.href = "../0-Index.html";
+        }
+    </script> 
+    <script src="../ASSETS/JS/Main.js"></script>
+</body>
+</html>
